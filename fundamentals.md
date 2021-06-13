@@ -24,3 +24,11 @@
 - Docker Image - is a single file with all the dependencies and configurations required to run a program.
 - Docker Compose
 ---
+
+## Creating A Dockerfile
+- Specify a base image.
+- Run some commands to install additional programs.
+- Specify a command to run on container startup.
+- To use execute the following command to build the image: `docker build <Dockerfile location>`
+- Then execute `docker run <name or id>` and a container should be created from your image.
+---
