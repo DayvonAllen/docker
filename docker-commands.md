@@ -1,5 +1,6 @@
-## Docker Commands
+## Basic Docker Commands
 - `docker ps` - list all running docker container.
+- `docker version` - prints information about docker and the version you are running
 - `docker run <image name>` - runs a new instance of a container.
   - `docker run --name <container name> -p 6379:6379 redis` - 'redis' is the image name.
     - This is an example of running redis.
@@ -16,15 +17,4 @@
       - `-i` - Makes the terminal interactive, you can type in the terminal but it's a blank terminal.
       - `t` - Gives you visual effects like `127.0.0.1:6379>` when used with `i`, so you can see what you are doing and where you are in the terminal.
       - `-it` - Therefore `i` and `t` are always used together like this `-it`, so you can interact with the terminal and have nice visual effects.
----
-
-## Redis Example
-- Run redis instance `docker run redis`, this will create a redis container with a random name.
-- Run redis instance with a custom name and port mapping `docker run --name rdb -p 6379:6379 redis`
-- Start a redis container that will log the output of the activity going on in the container `docker start -ai rdb`
-- Using Redis CLI, This is how we run the redis client inside of a docker container `docker exec -it rdb redis-cli`
-  - In the terminal you should see `127.0.0.1:6379> ` after executing that command for redis.
-    - Type `ping` and you should get `pong`, if so then you have connected successfully.
-    - Type `exit` to exit the redis cli
-    - To stop the redis container you have to manually execute `docker stop rdb`
 ---
