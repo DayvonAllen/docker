@@ -22,4 +22,5 @@
 - `docker system prune` - Will delete all stopped containers and build cache(images from Docker Hub).
 - `docker logs <container name or id>` - gets all the logs that are emitted from this container.
 - `docker exec -it <container name or id> sh` - gives you access to the terminal in a running container.
+- `docker build -t <docker id>/<image name>:<version> <path to Dockerfile>` - builds a container with a custom name. `-t` lets you tag a container.
 ---
