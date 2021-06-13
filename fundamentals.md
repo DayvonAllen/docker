@@ -6,6 +6,7 @@
 - Docker is a platform or ecosystem around creating and running containers.
 - Image - is a single file with all the dependencies and configurations required to run a program
 - Container - Is an instance of an image. It runs a program.
+- Docker installs a Linux virtual machine to work properly because namespacing and control groups only work in Linux and those are the foundation of Docker.
 ---
 
 ## Docker Ecosystem
