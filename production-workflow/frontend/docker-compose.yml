@@ -15,5 +15,17 @@ services:
         ports:
             - "3000:3000"
         volumes:
-            - /usr/app/node_modules
-            - .:/usr/app
+            - /home/node/app/node_modules
+            - .:/home/node/app
+        environment: 
+            - VAR=test
+    # this service is used solely for running tests
+    # tests:
+    #     build: 
+    #         context: .
+    #         dockerfile: Dockerfile.dev
+    #     volumes: 
+    #         - /home/node/app/node_modules
+    #         - .:/home/node/app
+    #     # override the start up command in a container
+    #     command: ["npm", "run", "test"]
