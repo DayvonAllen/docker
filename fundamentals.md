@@ -32,3 +32,8 @@
 - To use execute the following command to build the image: `docker build <Dockerfile location>`
 - Then execute `docker run <name or id>` and a container should be created from your image.
 ---
+
+## Docker Volumes
+- Allows you to copy a reference to your files into your container instead of the actual files, so you can update the files in the container on the fly.
+- Set up a mapping between a folder in a container and a folder outside of the container
+---

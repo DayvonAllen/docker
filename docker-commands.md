@@ -23,6 +23,15 @@
 - `docker logs <container name or id>` - gets all the logs that are emitted from this container.
 - `docker exec -it <container name or id> sh` - gives you access to the terminal in a running container.
 - `docker build -t <docker id>/<image name>:<version> <path to Dockerfile>` - builds a container with a custom name. `-t` lets you tag a container.
+  - When building a dev dockerfile you need to use this command: `docker build -f Dockerfile.dev .`
+    - `Dockerfile.dev` is the name of our dev file and `-f` means you want to specify a file to build
 - `docker rm <container-name>` - remove container.
 - `docker container prune` - removes all containers from the cache
+---
+
+## Setting Up A Volume
+- `docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <image id or name>`;
+  - `-v $(pwd):/app` - maps the current directory into `/app`
+    - `:` means we are trying to map a folder that's outside of the container with a folder that's in the container.
+  - `-v /app/node_modules` - puts a bookmark on the `node_modules` folder that's inside the container.
 ---
