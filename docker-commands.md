@@ -18,6 +18,7 @@
       - `-i` - Makes the terminal interactive, you can type in the terminal but it's a blank terminal.
       - `-t` - Gives you visual effects like `127.0.0.1:6379>` when used with `i`, so you can see what you are doing and where you are in the terminal.
       - `-it` - Therefore `i` and `t` are always used together like this `-it`, so you can interact with the terminal and have nice visual effects.
+      - By default we get access to `stdout` in a docker container. `-i` gives us access to `stdin` as well.
 - `docker create <image>` - creates a container out of an image.
 - `docker system prune` - Will delete all stopped containers and build cache(images from Docker Hub).
 - `docker logs <container name or id>` - gets all the logs that are emitted from this container.

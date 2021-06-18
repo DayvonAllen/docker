@@ -1,0 +1,19 @@
+version: "3"
+# Services are a type of container
+services: 
+    # container name
+    web:
+        # Restart policy
+        restart: always
+        # means build this container with the DockerFile in this folder
+        build: 
+            # Where we want all the files and folders to be pulled from
+            context: .
+            dockerfile: Dockerfile.dev
+        # port mapping
+        # '-' means array
+        ports:
+            - "3000:3000"
+        volumes:
+            - /usr/app/node_modules
+            - .:/usr/app
