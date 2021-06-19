@@ -14,6 +14,9 @@
   - `-a` - makes docker watch for output from the container and prints it out on your terminal.
   - You would run the following command in another terminal window after `docker start -ai <container name>`:
   - `docker exec -it <container name> <command>`
+      - `<command>` - lets you override the default command of the image.
+        - `docker exec -it redis redis-cli` - runs the `redis-cli` command on a redis container
+        - `docker exec -it mongo bash` - runs the `bash` command on a mongo container and lets you use the terminal in the container.
       - `exec` - It's going to let you execute a command in your container.
       - `-i` - Makes the terminal interactive, you can type in the terminal but it's a blank terminal.
       - `-t` - Gives you visual effects like `127.0.0.1:6379>` when used with `i`, so you can see what you are doing and where you are in the terminal.
