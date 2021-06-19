@@ -14,9 +14,6 @@ services:
         # '-' means array
         ports:
             - "3000:3000"
-        volumes:
-            - /home/node/app/node_modules
-            - .:/home/node/app
         environment: 
             - VAR=test
     # this service is used solely for running tests
