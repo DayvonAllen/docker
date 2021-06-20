@@ -2,6 +2,7 @@
 - `docker ps` - list all running docker container.
 - `docker version` - prints information about docker and the version you are running
 - `docker run <image name>` - creates and runs a new instance of a container.
+- `docker search <image name>` - will look for all images that have that name on dockerhub
   - `docker run --name <container name> -p 6379:6379 redis` - 'redis' is the image name.
     - This is an example of running redis.
     - `--name` - allows us to give a container a custom name. If you create a container with a custom name, you can't create another container with the same name.
